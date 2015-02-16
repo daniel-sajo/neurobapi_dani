@@ -9,7 +9,7 @@
             <dataSource type="POOLED">
                 <property name="driver" value="com.mysql.jdbc.Driver"/>
        <!--         <property name="url" value="jdbc:mysql://neurobaby.sztaki.hu:3306/neurobaby?useUnicode=true&amp;characterEncoding=utf-8"/> -->
-                <property name="url" value="jdbc:mysql://neurobaby.sztaki.hu:3306/neurobaby"/>
+                <property name="url" value="jdbc:mysql://localhost:3306/neurobaby"/>
                 <property name="username" value="neurobaby"/>
                 <property name="password" value="ANbJZvfUdSQHzwuy"/>
                 <property name="driver.encoding" value="UTF8"/>
