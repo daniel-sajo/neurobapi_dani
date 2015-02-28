@@ -4,6 +4,7 @@ import hu.sztaki.neurobapi.db.entities.Allowedvalue;
 import hu.sztaki.neurobapi.db.entities.Measurement;
 import hu.sztaki.neurobapi.db.entities.Patient;
 import hu.sztaki.neurobapi.db.entities.Principal;
+import hu.sztaki.neurobapi.db.entities.SPSSExportEntity;
 import hu.sztaki.neurobapi.db.entities.Variable;
 import hu.sztaki.neurobapi.db.entities.Variablegroup;
 import java.util.List;
@@ -60,4 +61,7 @@ public interface DbMapper {
 
     @Update("UPDATE measurement SET textualrepresentation=#{param2} WHERE id=#{param1}")
     public void updateTextualRepresentation(int measurementId, String text);
+    
+    @Select("SELECT * FROM view_for_spss_export")
+    public List<SPSSExportEntity> selectAllSPSSEntities();
 }

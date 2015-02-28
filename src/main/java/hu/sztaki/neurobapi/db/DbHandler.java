@@ -4,6 +4,7 @@ import hu.sztaki.neurobapi.db.entities.Allowedvalue;
 import hu.sztaki.neurobapi.db.entities.Measurement;
 import hu.sztaki.neurobapi.db.entities.Patient;
 import hu.sztaki.neurobapi.db.entities.Principal;
+import hu.sztaki.neurobapi.db.entities.SPSSExportEntity;
 import hu.sztaki.neurobapi.db.entities.Variable;
 import hu.sztaki.neurobapi.db.entities.Variablegroup;
 import java.io.IOException;
@@ -169,6 +170,16 @@ public class DbHandler {
             m.updateTextualRepresentation(measurementId,text);
             s.commit();
         }
+    }
+    
+    public List<SPSSExportEntity> selectAllSPSSEntities() {
+        List<SPSSExportEntity> ret;
+        try (SqlSession s = sqlSessionFactory.openSession()) {
+            DbMapper m = s.getMapper(DbMapper.class);
+            ret = m.selectAllSPSSEntities();
+        }
+        
+        return ret;
     }
 
 }
