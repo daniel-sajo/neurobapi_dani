@@ -6,6 +6,8 @@ public class SPSSExportEntity {
     private String variablename;
     private int week;
     private String value;
+    
+    SPSSExportEntity(){}
 
     public String getPatientname() {
         return patientname;
