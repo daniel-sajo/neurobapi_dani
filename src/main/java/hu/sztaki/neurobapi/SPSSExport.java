@@ -11,7 +11,7 @@ import javax.ws.rs.core.Response;
 
 /**
  *
- * @author Daniel Sajo
+ * @author Dániel Sajó sajodani@gmail.com
  */
 @Path("SPSSExport")
 public class SPSSExport {
